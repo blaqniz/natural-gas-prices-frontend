@@ -1,0 +1,17 @@
+mat-toolbar.mat-primary {
+  background: #6c724f;
+  color: #fff;
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logout-button {
+  margin-left: auto;
+}
+

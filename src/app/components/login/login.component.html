@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div>
+    <div class="form-group">
+      <label for="username">Username</label><br>
+      <input type="text" id="username" formControlName="username" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label><br>
+      <div class="password-input">
+        <input type="password" id="password" formControlName="password" class="form-control">
+        <button type="button" (click)="togglePasswordVisibility()" class="toggle-password">
+          <em [class]="'fa ' + (showPassword ? 'fa-eye-slash' : 'fa-eye')"></em>
+        </button>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Login</button>
+  </div>
+</form>
